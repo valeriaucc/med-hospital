@@ -158,7 +158,7 @@ export function Hero() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-ink-900 dark:text-white">
-                      Panel ConsultaMed
+                      Panel MedHospital
                     </p>
                     <p className="text-xs text-ink-500 dark:text-ink-400">
                       Vista de control rápida

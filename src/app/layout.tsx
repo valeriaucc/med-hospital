@@ -24,10 +24,9 @@ export const metadata: Metadata = {
     template: "%s · MedHospital",
   },
   description:
-    "MedHospital (sistema ConsultaMed) es una plataforma web para la gestión digital de pacientes, médicos y citas médicas, que optimiza la administración hospitalaria.",
+    "MedHospital es una plataforma web para la gestión digital de pacientes, médicos y citas médicas, que optimiza la administración hospitalaria.",
   keywords: [
     "MedHospital",
-    "ConsultaMed",
     "gestión hospitalaria",
     "citas médicas",
     "Django",
@@ -82,7 +81,6 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "MedHospital",
-  alternateName: "ConsultaMed",
   applicationCategory: "HealthcareApplication",
   description:
     "Plataforma web de gestión hospitalaria para administrar pacientes, médicos y citas médicas.",

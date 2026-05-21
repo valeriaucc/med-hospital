@@ -1,7 +1,7 @@
 export const site = {
   name: "MedHospital",
-  longName: "MedHospital · ConsultaMed",
-  systemName: "ConsultaMed",
+  longName: "MedHospital",
+  systemName: "MedHospital",
   subject: "Electiva I",
   tagline: "Plataforma de Gestión Hospitalaria",
   description:
@@ -35,12 +35,12 @@ export const nav = [
 
 export const introduccion = {
   title: "Introducción",
-  body: "ConsultaMed es una plataforma web diseñada para optimizar la gestión hospitalaria mediante la administración digital de pacientes, médicos y citas médicas. El sistema automatiza procesos administrativos, mejora el control de la información clínica y facilita una atención médica más eficiente y organizada.",
+  body: "MedHospital es una plataforma web diseñada para optimizar la gestión hospitalaria mediante la administración digital de pacientes, médicos y citas médicas. El sistema automatiza procesos administrativos, mejora el control de la información clínica y facilita una atención médica más eficiente y organizada.",
 };
 
 export const problematica = {
   title: "Problemática",
-  body: "Muchos centros médicos gestionan citas y pacientes de forma manual, lo que provoca pérdida de información, retrasos en la atención, duplicidad de citas y procesos administrativos lentos. ConsultaMed surge como una plataforma digital centralizada para optimizar la organización y mejorar la eficiencia en la gestión hospitalaria.",
+  body: "Muchos centros médicos gestionan citas y pacientes de forma manual, lo que provoca pérdida de información, retrasos en la atención, duplicidad de citas y procesos administrativos lentos. MedHospital surge como una plataforma digital centralizada para optimizar la organización y mejorar la eficiencia en la gestión hospitalaria.",
   pains: [
     "Pérdida de información clínica",
     "Retrasos en la atención",
@@ -213,7 +213,7 @@ export const roles = {
 
 export const funcionalidades = {
   title: "Funcionalidades del Sistema",
-  subtitle: "Módulos disponibles en ConsultaMed",
+  subtitle: "Módulos disponibles en MedHospital",
   modules: [
     {
       title: "Interfaz Responsiva",
@@ -299,7 +299,7 @@ export const seguridad = {
 
 export const timeline = {
   title: "Proceso del Proyecto",
-  subtitle: "Fases de desarrollo de ConsultaMed",
+  subtitle: "Fases de desarrollo de MedHospital",
   milestones: [
     {
       phase: "Fase 1",
@@ -348,7 +348,7 @@ export const timeline = {
 
 export const conclusion = {
   title: "Conclusión",
-  body: "ConsultaMed optimiza la gestión hospitalaria mediante la automatización de procesos médicos y administrativos, ofreciendo una solución segura y organizada para la administración de pacientes, médicos y citas, mientras aplica tecnologías web y bases de datos en un entorno real.",
+  body: "MedHospital optimiza la gestión hospitalaria mediante la automatización de procesos médicos y administrativos, ofreciendo una solución segura y organizada para la administración de pacientes, médicos y citas, mientras aplica tecnologías web y bases de datos en un entorno real.",
 };
 
 export const stats = [

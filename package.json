@@ -2,7 +2,7 @@
   "name": "medhospital-web",
   "version": "1.0.0",
   "private": true,
-  "description": "Sitio web del proyecto ConsultaMed / MedHospital - presentación moderna de la plataforma de gestión hospitalaria.",
+  "description": "Sitio web del proyecto MedHospital - presentación moderna de la plataforma de gestión hospitalaria.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

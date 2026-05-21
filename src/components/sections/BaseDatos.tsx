@@ -69,7 +69,7 @@ export function BaseDatos() {
               viewBox="0 0 760 320"
               className="w-full"
               role="img"
-              aria-label="Diagrama de entidad-relación de ConsultaMed"
+              aria-label="Diagrama de entidad-relación de MedHospital"
             >
               <defs>
                 <marker
