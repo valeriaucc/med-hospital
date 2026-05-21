@@ -6,7 +6,7 @@ export function Conclusion() {
   return (
     <Section id="conclusion" tone="default">
       <Reveal>
-        <div className="mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-sky-700 p-10 text-center text-white shadow-soft sm:p-14">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-sky-700 p-10 text-center text-white shadow-soft sm:p-14 dark:from-brand-700 dark:via-brand-800 dark:to-sky-800">
           <span className="inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
             Conclusión
           </span>

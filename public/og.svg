@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="55%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="rgba(255,255,255,0.12)"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <circle cx="1020" cy="120" r="140" fill="rgba(255,255,255,0.18)" filter="url(#glow)"/>
+  <circle cx="120" cy="540" r="180" fill="rgba(255,255,255,0.12)" filter="url(#glow)"/>
+
+  <g transform="translate(80, 80)">
+    <rect width="76" height="76" rx="20" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+    <path d="M18 42 L30 42 L36 28 L46 56 L54 36 L60 42 L62 42" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-2)"/>
+    <text x="100" y="50" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="-0.5">ConsultaMed</text>
+  </g>
+
+  <g transform="translate(80, 260)">
+    <text font-family="Poppins, Inter, system-ui, sans-serif" font-size="86" font-weight="800" fill="#ffffff" letter-spacing="-3">
+      <tspan x="0" dy="0">Plataforma de</tspan>
+      <tspan x="0" dy="100">Gestión Hospitalaria</tspan>
+    </text>
+  </g>
+
+  <text x="80" y="510" font-family="Inter, system-ui, sans-serif" font-size="28" fill="rgba(255,255,255,0.92)" letter-spacing="-0.2">
+    Administración digital de pacientes, médicos y citas médicas.
+  </text>
+
+  <g transform="translate(80, 560)" font-family="Inter, system-ui, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">
+    <text>MedHospital · Electiva I</text>
+    <text x="1040" text-anchor="end">Next.js · TypeScript · Tailwind</text>
+  </g>
+</svg>

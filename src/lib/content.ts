@@ -11,6 +11,14 @@ export const site = {
     { name: "David Luna" },
     { name: "Vanessa Mena" },
   ],
+  repo: {
+    url: "https://github.com/valeriaucc/med-hospital",
+    label: "valeriaucc/med-hospital",
+  },
+  deploy: {
+    url: "https://med-hospital.onrender.com",
+    label: "med-hospital.onrender.com",
+  },
 };
 
 export const nav = [
@@ -18,8 +26,9 @@ export const nav = [
   { id: "objetivos", label: "Objetivos" },
   { id: "tecnologias", label: "Tecnologías" },
   { id: "arquitectura", label: "Arquitectura" },
+  { id: "base-datos", label: "Base de Datos" },
   { id: "funcionalidades", label: "Funcionalidades" },
-  { id: "seguridad", label: "Seguridad" },
+  { id: "timeline", label: "Proceso" },
   { id: "equipo", label: "Equipo" },
 ];
 
@@ -81,18 +90,21 @@ export const arquitectura = {
       role: "Base de datos",
       detail: "Representa las entidades y la lógica de persistencia.",
       icon: "database",
+      sample: "class Patient(models.Model):\n    name = CharField(...)",
     },
     {
       name: "View",
       role: "Lógica del sistema",
       detail: "Procesa las peticiones, aplica reglas y prepara los datos.",
       icon: "git-branch",
+      sample: "def appointments(request):\n    return render(...)",
     },
     {
       name: "Template",
       role: "Interfaz visual",
       detail: "Renderiza la información hacia el usuario final.",
       icon: "layout",
+      sample: "{% for cita in citas %}\n  {{ cita.fecha }}\n{% endfor %}",
     },
   ],
 };
@@ -114,25 +126,49 @@ export const baseDatos = {
   subtitle: "Modelo entidad-relación principal",
   entities: [
     {
+      name: "Specialty",
+      icon: "heart-pulse",
+      fields: [
+        { name: "id", type: "PK", isKey: true },
+        { name: "nombre", type: "string" },
+        { name: "descripcion", type: "text" },
+      ],
+    },
+    {
       name: "Doctor",
       icon: "stethoscope",
-      fields: ["id", "nombre", "especialidad_id", "email"],
+      fields: [
+        { name: "id", type: "PK", isKey: true },
+        { name: "nombre", type: "string" },
+        { name: "especialidad_id", type: "FK", isKey: true },
+        { name: "email", type: "string" },
+      ],
     },
     {
       name: "Patient",
       icon: "user",
-      fields: ["id", "nombre", "documento", "telefono"],
+      fields: [
+        { name: "id", type: "PK", isKey: true },
+        { name: "nombre", type: "string" },
+        { name: "documento", type: "string" },
+        { name: "telefono", type: "string" },
+      ],
     },
     {
       name: "Appointment",
       icon: "calendar",
-      fields: ["id", "fecha", "doctor_id", "patient_id"],
+      fields: [
+        { name: "id", type: "PK", isKey: true },
+        { name: "fecha", type: "datetime" },
+        { name: "doctor_id", type: "FK", isKey: true },
+        { name: "patient_id", type: "FK", isKey: true },
+      ],
     },
-    {
-      name: "Specialty",
-      icon: "heart-pulse",
-      fields: ["id", "nombre", "descripcion"],
-    },
+  ],
+  relationships: [
+    { from: "Doctor", to: "Specialty", label: "pertenece a" },
+    { from: "Appointment", to: "Doctor", label: "atendida por" },
+    { from: "Appointment", to: "Patient", label: "agendada para" },
   ],
 };
 
@@ -161,6 +197,17 @@ export const roles = {
       description: "Consulta sus citas e información médica personal.",
     },
   ],
+  permissions: {
+    headers: ["Funcionalidad", "Admin", "Médico", "Operador", "Paciente"],
+    rows: [
+      { feature: "Gestión de usuarios", values: [true, false, false, false] },
+      { feature: "Crear/editar citas", values: [true, false, true, false] },
+      { feature: "Consultar agenda propia", values: [true, true, false, true] },
+      { feature: "Historias clínicas", values: [true, true, false, "read"] },
+      { feature: "Reportes y dashboards", values: [true, "read", false, false] },
+      { feature: "Configuración del sistema", values: [true, false, false, false] },
+    ] as { feature: string; values: (boolean | "read")[] }[],
+  },
 };
 
 export const funcionalidades = {
@@ -249,7 +296,63 @@ export const seguridad = {
   ],
 };
 
+export const timeline = {
+  title: "Proceso del Proyecto",
+  subtitle: "Fases de desarrollo de ConsultaMed",
+  milestones: [
+    {
+      phase: "Fase 1",
+      title: "Análisis y Diseño",
+      icon: "search",
+      description:
+        "Identificación de la problemática hospitalaria y definición de objetivos, alcance, requisitos y modelo de datos.",
+    },
+    {
+      phase: "Fase 2",
+      title: "Arquitectura y Modelado",
+      icon: "git-branch",
+      description:
+        "Diseño del patrón MVT en Django, definición de modelos (Patient, Doctor, Specialty, Appointment) y diagrama ER.",
+    },
+    {
+      phase: "Fase 3",
+      title: "Desarrollo Backend",
+      icon: "server",
+      description:
+        "Implementación de vistas, autenticación por roles, gestión de citas y validación de reglas de negocio.",
+    },
+    {
+      phase: "Fase 4",
+      title: "Frontend e Interfaz",
+      icon: "layout",
+      description:
+        "Construcción de plantillas con Bootstrap 5, dashboards con Chart.js y experiencia móvil responsiva.",
+    },
+    {
+      phase: "Fase 5",
+      title: "Pruebas y Seguridad",
+      icon: "shield-check",
+      description:
+        "Validación de formularios, protección de rutas, variables de entorno y refinamiento del flujo de usuario.",
+    },
+    {
+      phase: "Fase 6",
+      title: "Despliegue",
+      icon: "cloud",
+      description:
+        "Configuración con Gunicorn + PostgreSQL y publicación en la nube (Render / Railway).",
+    },
+  ],
+};
+
 export const conclusion = {
   title: "Conclusión",
   body: "ConsultaMed optimiza la gestión hospitalaria mediante la automatización de procesos médicos y administrativos, ofreciendo una solución segura y organizada para la administración de pacientes, médicos y citas, mientras aplica tecnologías web y bases de datos en un entorno real.",
 };
+
+export const stats = [
+  { value: "4", label: "Entidades" },
+  { value: "4", label: "Roles" },
+  { value: "8+", label: "Módulos" },
+  { value: "6", label: "Fases" },
+];

@@ -8,9 +8,10 @@ type SectionProps = {
 };
 
 const toneStyles: Record<NonNullable<SectionProps["tone"]>, string> = {
-  default: "bg-white",
-  muted: "bg-ink-50",
-  brand: "bg-gradient-to-b from-brand-50 to-white",
+  default: "bg-white dark:bg-ink-950",
+  muted: "bg-ink-50 dark:bg-ink-900/40",
+  brand:
+    "bg-gradient-to-b from-brand-50 to-white dark:from-ink-900 dark:to-ink-950",
 };
 
 export function Section({

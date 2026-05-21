@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
   theme: {
     extend: {
@@ -28,6 +29,7 @@ const config: Config = {
           700: "#334155",
           800: "#1e293b",
           900: "#0f172a",
+          950: "#020617",
         },
       },
       fontFamily: {
@@ -37,6 +39,8 @@ const config: Config = {
       boxShadow: {
         soft: "0 10px 30px -12px rgba(15, 118, 110, 0.18)",
         card: "0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -12px rgba(15, 23, 42, 0.12)",
+        "card-dark":
+          "0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5)",
       },
       backgroundImage: {
         "hero-grid":
@@ -46,11 +50,16 @@ const config: Config = {
       },
       animation: {
         "float-slow": "float 8s ease-in-out infinite",
+        "fade-in": "fadeIn 0.6s ease-out forwards",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
+        },
+        fadeIn: {
+          from: { opacity: "0", transform: "translateY(8px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
     },

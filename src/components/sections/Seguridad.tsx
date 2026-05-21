@@ -22,7 +22,9 @@ export function Seguridad() {
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-soft">
                 <Icon name={item.icon} className="h-6 w-6" />
               </span>
-              <p className="text-sm font-semibold text-ink-800">{item.text}</p>
+              <p className="text-sm font-semibold text-ink-800 dark:text-ink-200">
+                {item.text}
+              </p>
             </article>
           </Reveal>
         ))}

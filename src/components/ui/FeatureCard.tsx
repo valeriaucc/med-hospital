@@ -18,9 +18,11 @@ export function FeatureCard({
       <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-soft">
         <Icon name={icon} className="h-6 w-6" />
       </div>
-      <h3 className="text-lg font-semibold text-ink-900">{title}</h3>
+      <h3 className="text-lg font-semibold text-ink-900 dark:text-white">
+        {title}
+      </h3>
       {description ? (
-        <p className="mt-2 text-sm leading-relaxed text-ink-600">
+        <p className="mt-2 text-sm leading-relaxed text-ink-600 dark:text-ink-400">
           {description}
         </p>
       ) : null}
@@ -29,7 +31,7 @@ export function FeatureCard({
           {bullets.map((b) => (
             <li
               key={b}
-              className="flex items-start gap-2 text-sm text-ink-700"
+              className="flex items-start gap-2 text-sm text-ink-700 dark:text-ink-300"
             >
               <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
               <span>{b}</span>

@@ -30,8 +30,10 @@ export function Equipo() {
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-gradient font-display text-2xl font-bold text-white shadow-soft">
                 {initials(a.name)}
               </div>
-              <p className="mt-4 font-semibold text-ink-900">{a.name}</p>
-              <p className="mt-1 text-xs uppercase tracking-wider text-ink-500">
+              <p className="mt-4 font-semibold text-ink-900 dark:text-white">
+                {a.name}
+              </p>
+              <p className="mt-1 text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">
                 Equipo {site.name}
               </p>
             </article>

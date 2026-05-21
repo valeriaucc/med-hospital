@@ -18,7 +18,7 @@ export function Objetivos() {
 
       <div className="mt-14 grid gap-6 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          <div className="card h-full bg-gradient-to-br from-brand-600 to-sky-600 text-white">
+          <div className="card h-full bg-gradient-to-br from-brand-600 to-sky-600 text-white dark:from-brand-700 dark:to-sky-700">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/30">
               <Target className="h-6 w-6" aria-hidden="true" />
             </div>
@@ -29,7 +29,7 @@ export function Objetivos() {
 
         <div className="lg:col-span-7">
           <Reveal>
-            <h3 className="mb-6 text-xl font-bold text-ink-900">
+            <h3 className="mb-6 text-xl font-bold text-ink-900 dark:text-white">
               {objetivosEspecificos.title}
             </h3>
           </Reveal>
@@ -37,10 +37,12 @@ export function Objetivos() {
             {objetivosEspecificos.items.map((it, i) => (
               <Reveal as="li" key={it.text} delay={i * 0.05}>
                 <div className="card flex items-start gap-4">
-                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700 dark:bg-brand-900/30 dark:text-brand-300">
                     <Icon name={it.icon} className="h-5 w-5" />
                   </span>
-                  <p className="text-sm font-medium text-ink-800">{it.text}</p>
+                  <p className="text-sm font-medium text-ink-800 dark:text-ink-200">
+                    {it.text}
+                  </p>
                 </div>
               </Reveal>
             ))}
