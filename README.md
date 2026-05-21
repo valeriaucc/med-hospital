@@ -1,6 +1,6 @@
-# ConsultaMed · MedHospital Web
+# MedHospital · ConsultaMed Web
 
-Sitio web moderno y responsive que presenta el proyecto **ConsultaMed / MedHospital** — una plataforma de gestión hospitalaria para la administración digital de pacientes, médicos y citas médicas.
+Sitio web moderno y responsive que presenta el proyecto **MedHospital** (sistema ConsultaMed) — una plataforma de gestión hospitalaria para la administración digital de pacientes, médicos y citas médicas.
 
 > Construido como onepager con Next.js 14, TypeScript, Tailwind CSS y Framer Motion. Listo para desplegar como **Static Site en Render**.
 

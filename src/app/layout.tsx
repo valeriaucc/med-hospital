@@ -20,14 +20,14 @@ const siteUrl = "https://med-hospital.onrender.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "ConsultaMed · Plataforma de Gestión Hospitalaria",
-    template: "%s · ConsultaMed",
+    default: "MedHospital · Plataforma de Gestión Hospitalaria",
+    template: "%s · MedHospital",
   },
   description:
-    "ConsultaMed (MedHospital) es una plataforma web para la gestión digital de pacientes, médicos y citas médicas, que optimiza la administración hospitalaria.",
+    "MedHospital (sistema ConsultaMed) es una plataforma web para la gestión digital de pacientes, médicos y citas médicas, que optimiza la administración hospitalaria.",
   keywords: [
-    "ConsultaMed",
     "MedHospital",
+    "ConsultaMed",
     "gestión hospitalaria",
     "citas médicas",
     "Django",
@@ -40,27 +40,27 @@ export const metadata: Metadata = {
     { name: "David Luna" },
     { name: "Vanessa Mena" },
   ],
-  creator: "Equipo ConsultaMed",
+  creator: "Equipo MedHospital",
   openGraph: {
-    title: "ConsultaMed · Plataforma de Gestión Hospitalaria",
+    title: "MedHospital · Plataforma de Gestión Hospitalaria",
     description:
       "Optimiza la administración de pacientes, médicos y citas médicas con una plataforma moderna, segura y centralizada.",
     type: "website",
     locale: "es_CO",
     url: siteUrl,
-    siteName: "ConsultaMed",
+    siteName: "MedHospital",
     images: [
       {
         url: "/og.svg",
         width: 1200,
         height: 630,
-        alt: "ConsultaMed · Plataforma de Gestión Hospitalaria",
+        alt: "MedHospital · Plataforma de Gestión Hospitalaria",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ConsultaMed · Plataforma de Gestión Hospitalaria",
+    title: "MedHospital · Plataforma de Gestión Hospitalaria",
     description:
       "Plataforma web para gestionar pacientes, médicos y citas médicas.",
     images: ["/og.svg"],
@@ -81,8 +81,8 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "ConsultaMed",
-  alternateName: "MedHospital",
+  name: "MedHospital",
+  alternateName: "ConsultaMed",
   applicationCategory: "HealthcareApplication",
   description:
     "Plataforma web de gestión hospitalaria para administrar pacientes, médicos y citas médicas.",
@@ -95,7 +95,7 @@ const jsonLd = {
   },
   author: {
     "@type": "Organization",
-    name: "Equipo ConsultaMed · Electiva I",
+    name: "Equipo MedHospital · Electiva I",
     member: [
       { "@type": "Person", name: "Valentina Burbano" },
       { "@type": "Person", name: "Valeria Góngora" },

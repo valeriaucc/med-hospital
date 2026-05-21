@@ -18,7 +18,7 @@ export function Equipo() {
       <Reveal>
         <SectionTitle
           eyebrow="Equipo"
-          title="Detrás de ConsultaMed"
+          title={`Detrás de ${site.name}`}
           subtitle={`Estudiantes de ${site.subject} que diseñaron y desarrollaron el proyecto.`}
         />
       </Reveal>

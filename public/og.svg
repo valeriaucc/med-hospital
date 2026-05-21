@@ -22,7 +22,7 @@
   <g transform="translate(80, 80)">
     <rect width="76" height="76" rx="20" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
     <path d="M18 42 L30 42 L36 28 L46 56 L54 36 L60 42 L62 42" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-2)"/>
-    <text x="100" y="50" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="-0.5">ConsultaMed</text>
+    <text x="100" y="50" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="-0.5">MedHospital</text>
   </g>
 
   <g transform="translate(80, 260)">

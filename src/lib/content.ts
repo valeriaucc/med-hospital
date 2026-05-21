@@ -1,6 +1,7 @@
 export const site = {
-  name: "ConsultaMed",
+  name: "MedHospital",
   longName: "MedHospital · ConsultaMed",
+  systemName: "ConsultaMed",
   subject: "Electiva I",
   tagline: "Plataforma de Gestión Hospitalaria",
   description:

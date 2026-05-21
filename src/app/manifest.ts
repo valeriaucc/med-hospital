@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "ConsultaMed · MedHospital",
-    short_name: "ConsultaMed",
+    name: "MedHospital · ConsultaMed",
+    short_name: "MedHospital",
     description:
       "Plataforma web de gestión hospitalaria para administrar pacientes, médicos y citas médicas.",
     start_url: "/",
